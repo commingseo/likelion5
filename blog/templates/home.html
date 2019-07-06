@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>B-LOG</title>
+    <div class: back></div>
+    <style>
+        .write {
+            color:whitesmoke;
+        }
+        .back {
+            background-color:wit;
+        }
+        .font {
+            font-size: 15px
+        }
+        .align-left { text-align: left; }
+        .align-center { text-align: center; } 
+        .align-right { text-align: right; } 
+        .align-justify { text-align: justify; }
+        .back1 {background-color:black}
+        .top {width: 100%}
+        .text{width: 100%}
+
+    </style>
+</head>
+<div class="font">
+<div class="align-center">
+<body>
+    <div calss="top">
+    <div class="back1">
+    <div class="font">
+    
+    
+    <h1><div class="write">B-LOG</div></h1>
+    <a href="{% url 'new' %}"><button>글 쓰러가기</button></a>
+    </div calss="top">
+    </div class="back1">
+
+ {% for blog in blogs %}
+    <tr>
+    
+    <div class="back">
+    <h1>{{ blog.title }}</h1>
+    <p>{{ blog.title}}</p>
+    <p>{{ blog.time }}</p>
+    <p>{{ blog.body }}</p>
+    </div>
+    </tr>
+<hr>
+{% endfor %}
+</div class="font">
+</div class="align-center">
+</body>
+</html>
